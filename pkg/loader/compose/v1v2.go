@@ -264,6 +264,10 @@ func libComposeToKomposeMapping(composeObject *project.Project) (kobject.Kompose
 					return kobject.KomposeObject{}, errors.Wrap(err, "unable to get HorizontalPodAutoscaler.cpu.targetAverageUtilization")
 				}
 				serviceConfig.AutoScaler.TargetAvgCPU.TargetAverageUtilization = int32(v)
+			case LabelImagePullPolicy:
+				serviceConfig.ImagePullPolicy = value
+			case LabelImagePullSecret:
+				serviceConfig.ImagePullSecret = value
 			default:
 				serviceConfig.Labels[key] = value
 			}
