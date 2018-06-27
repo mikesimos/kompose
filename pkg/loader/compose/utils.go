@@ -35,6 +35,12 @@ const (
 	LabelServiceExposeTLSSecret = "kompose.service.expose.tls-secret"
 	// LabelControllerType defines the type of controller to be created
 	LabelControllerType = "kompose.controller.type"
+	// LabelAutoscalerMinReplicas defines HorizontalPodAutoscaler minReplicas value
+	LabelAutoscalerMinReplicas = "kompose.service.HorizontalPodAutoscaler.minReplicas"
+	// LabelAutoscalerMaxReplicas defines HorizontalPodAutoscaler maxReplicas value
+	LabelAutoscalerMaxReplicas = "kompose.service.HorizontalPodAutoscaler.maxReplicas"
+	// LabelAutoscalerAvgCPUUtilization defines HorizontalPodAutoscaler cpu.targetAverageUtilization value
+	LabelAutoscalerAvgCPUUtilization = "kompose.service.HorizontalPodAutoscaler.cpu.targetAvg"
 	// LabelImagePullPolicy defines Kubernetes PodSpec imagePullPolicy.
 	LabelImagePullPolicy = "kompose.image-pull-policy"
 	// LabelImagePullSecret defines a secret name for kubernetes ImagePullSecrets
